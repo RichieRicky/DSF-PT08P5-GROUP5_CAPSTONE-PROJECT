@@ -1,6 +1,6 @@
 # Predicting HIV Risk and Identifying Key Infection Drivers among Adolescent Girls and Young Women in Kenya
 
-![image.png](attachment:image.png)
+![alt text](download.png)
 
 
 # 1.0 Overview
