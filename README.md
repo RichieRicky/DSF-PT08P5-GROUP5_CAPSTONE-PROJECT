@@ -1,6 +1,6 @@
 # Predicting HIV Risk and Identifying Key Infection Drivers among Adolescent Girls and Young Women in Kenya
 
-![alt text](download.png)
+![alt text](tmp/download.png)
 
 ## Table of Contents
 
@@ -82,24 +82,24 @@ This project addresses these challenges by leveraging data science to predict ri
 # Exploratory Data Analysis (EDA)
    - Vizualizing the distribution of the target variable: 99% are Negative cases while  1% consists of positive cases. 
 
-![alt text](95dfe424-5950-4f8a-af8d-b4e5c6605c48.png)
+![alt text](tmp/95dfe424-5950-4f8a-af8d-b4e5c6605c48.png)
 
   - Demographics: 72% of participants lived in households headed by parents.
 
- ![alt text](890d0bf0-6937-4007-a01b-380e09d23cf0.png)
+ ![alt text](tmp/890d0bf0-6937-4007-a01b-380e09d23cf0.png)
 
 - Behavioral Trends:
 42% used condoms inconsistently with their last partner.
 
-![alt text](d4f3f985-f0f8-461c-a6f9-361db142def0.png)
+![alt text](tmp/d4f3f985-f0f8-461c-a6f9-361db142def0.png)
 
 - Impact of the health program: Graduation emerges as the frontrunner exit reason at an impressive 398,182, overshadowing the next largest categories—lost to follow-up, permanent migration, and voluntary exit—while death and other reasons remain minimal, underscoring a strong program completion rate and highlighting targeted areas for improvement.
 
-![alt text](1749ad86-67e4-4666-ae13-f2f0a4c2665c.png)
+![alt text](tmp/1749ad86-67e4-4666-ae13-f2f0a4c2665c.png)
 
 - Current education level
 
-![alt text](34a97f50-9e3f-4aa2-9dad-d68d819e0249.png)
+![alt text](tmp/34a97f50-9e3f-4aa2-9dad-d68d819e0249.png)
 
 # Modeling 
 ## 1. Approach
@@ -187,7 +187,7 @@ Random Forest - Best Overall: Achieved a solid balance between accuracy (69.85%)
 
 The confusion matrix below illustrates the performance of the tuned Random Forest model. It correctly predicted 150 HIV-negative and 135 HIV-positive cases, but misclassified 60 false positives and 63 false negatives. While overall accuracy is strong, the false negative rate suggests room for improvement to reduce missed high-risk cases. 
 
-![alt text](a97b4165-520a-46b7-abe2-140bff311b8e.png)
+![alt text](tmp/a97b4165-520a-46b7-abe2-140bff311b8e.png)
 
 XGBoost - High Recall, But Risky: It caught every single positive case (100% recall) but at the cost of very low precision (48.53%). This means a high false positive rate, which could be a problem depending on the use case.
 
