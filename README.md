@@ -221,3 +221,8 @@ Models Employed:
 - Logistic Regression
 - Random Forest
 - XGBOOST
+
+## Resources
+Data - [Download Processed Data](https://github.com/RichieRicky/DSF-PT08P5-GROUP5_CAPSTONE-PROJECT/raw/refs/heads/main/dreams_raw_dataset.zip)
+
+Notebook - [Open Notebook](https://github.com/RichieRicky/DSF-PT08P5-GROUP5_CAPSTONE-PROJECT/blob/main/Index.ipynb)
