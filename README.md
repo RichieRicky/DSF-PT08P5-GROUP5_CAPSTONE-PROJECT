@@ -185,6 +185,10 @@ Logistic Regression Stood Out: Among the baseline models, it performed the best 
 
 Random Forest - Best Overall: Achieved a solid balance between accuracy (69.85%) and F1-score (68.70%).
 
+The confusion matrix below illustrates the performance of the tuned Random Forest model. It correctly predicted 150 HIV-negative and 135 HIV-positive cases, but misclassified 60 false positives and 63 false negatives. While overall accuracy is strong, the false negative rate suggests room for improvement to reduce missed high-risk cases. 
+
+![alt text](a97b4165-520a-46b7-abe2-140bff311b8e.png)
+
 XGBoost - High Recall, But Risky: It caught every single positive case (100% recall) but at the cost of very low precision (48.53%). This means a high false positive rate, which could be a problem depending on the use case.
 
 ### Key Features Identified (Random Forest Insights)
