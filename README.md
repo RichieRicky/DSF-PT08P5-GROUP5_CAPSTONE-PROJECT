@@ -74,26 +74,22 @@ This project addresses these challenges by leveraging data science to predict ri
 
 
 # Exploratory Data Analysis (EDA)
-- Vizualizing the distribution of the target variable: 99% are Negative cases while  1% consists of positive cases. 
-
-![alt text](tmp/95dfe424-5950-4f8a-af8d-b4e5c6605c48.png)
-
 - Demographics: 72% of participants lived in households headed by parents.
 
- ![alt text](6fdeae7b-33d4-4b9b-b255-24638c8c3a4f.png)
+ ![alt text](tmp/6fdeae7b-33d4-4b9b-b255-24638c8c3a4f.png)
 
 - Behavioral Trends:
 42% used condoms inconsistently with their last partner.
 
-![alt text](e6e2aa64-3022-4d13-9bb7-4f86f5d27218.png)
+![alt text](tmp/e6e2aa64-3022-4d13-9bb7-4f86f5d27218.png)
 
 - Impact of the health program: Graduation emerges as the frontrunner exit reason at an impressive 398,182, overshadowing the next largest categories—lost to follow-up.
 
-![alt text](34b374fe-f151-440d-ba19-98bac8134562.png)
+![alt text](tmp/34b374fe-f151-440d-ba19-98bac8134562.png)
 
-- Current education level
+- Currently in school
 
-![alt text](tmp/34a97f50-9e3f-4aa2-9dad-d68d819e0249.png)
+![alt text](tmp/31d23d5b-fbdf-4739-9082-f0eecefbc704.png)
 
 # Modeling 
 ## 1. Approach
