@@ -10,6 +10,7 @@
 - [Exploratory Data Analysis (EDA)](#exploratory-data-analysis-eda)  
 - [Modeling](#modeling)  
 - [Key Takeaways](#key-takeaways-from-our-analysis)  
+- [Instructions](#Instructions)
 - [Recommendations](#recommendations)  
 - [Future Improvements](#future-improvements)  
 - [Tech Stack & Dependencies](#tech-stack--dependencies)  
@@ -17,15 +18,11 @@
 
 # Overview
 
-According to HIV & AIDS world outlook reports highlights HIV as the biggest global health issue with approximately 38 million infected worldwide(WHO(2020), UNAIDS(2020)).The disease mostly affects adolescent girls and young women (AGYW), who are at a higher risk of HIV infection due to a combination of biological, socio-economic, and behavioral factors (WHO(2020), UNAIDS(2019)).
-
-Regionally, sub-Saharan Africa is bearing the bulk of the epidemic and bears nearly 70% of the world's HIV cases (WHO(2020), UNAIDS(2019)).
-
-Locally in Kenya, HIV remains a significant public health issue among AGYW relative to their counterparts who are male. Structural impediments such as gender disparities, levels of poverty, and limited access to education and health care leave AGYW in some of the counties vulnerable to increased vulnerability (National AIDS Control Council, 2020; Ministry of Health Kenya, 2021). Despite interventions such as the Aid-Funded programs that seek to stem HIV infections by surmounting these structural drivers, the challenge of reaching high-risk groups and utilizing existing resources to the fullest for intervention still exists.This research will, therefore adopt Cross Industry Standard Procedures- Data Mining(CRISP-DM) methodology for the health industry.
+HIV remains a major global health issue, affecting approximately 38 million people worldwide, with adolescent girls and young women (AGYW) at higher risk due to biological, socio-economic, and behavioral factors. Sub-Saharan Africa bears nearly 70% of global cases, with Kenya facing significant challenges among AGYW due to gender disparities, poverty, and limited access to education and healthcare. Despite aid-funded programs, gaps in reaching high-risk groups persist. This project will apply the CRISP-DM methodology to enhance data-driven HIV intervention strategies in the health sector.
 
 # Business Understanding
 ## Problem Statement
-Adolescent girls and young women (AGYW) in Kenya face a disproportionately high risk of HIV infection, accounting for nearly 70% of new cases in sub-Saharan Africa. Despite interventions like the SPARK program—which targets structural drivers such as poverty, gender inequality, and lack of education—critical challenges persist:
+Adolescent girls and young women in Kenya face a disproportionately high risk of HIV infection. Despite health program interventions which target structural drivers such as poverty, gender inequality, and lack of education—critical challenges persist:
   - Inefficient Resource Allocation: Limited ability to identify and prioritize high-risk populations.
   - Gaps in Intervention Impact: Uncertainty about which strategies (biomedical, behavioral, or social) are most effective.
   - Data-Driven Decision-Making: Need for actionable insights to optimize program reach and reduce HIV incidence.
@@ -77,22 +74,22 @@ This project addresses these challenges by leveraging data science to predict ri
 
 
 # Exploratory Data Analysis (EDA)
-   - Vizualizing the distribution of the target variable: 99% are Negative cases while  1% consists of positive cases. 
+- Vizualizing the distribution of the target variable: 99% are Negative cases while  1% consists of positive cases. 
 
 ![alt text](tmp/95dfe424-5950-4f8a-af8d-b4e5c6605c48.png)
 
-  - Demographics: 72% of participants lived in households headed by parents.
+- Demographics: 72% of participants lived in households headed by parents.
 
- ![alt text](tmp/890d0bf0-6937-4007-a01b-380e09d23cf0.png)
+ ![alt text](6fdeae7b-33d4-4b9b-b255-24638c8c3a4f.png)
 
 - Behavioral Trends:
 42% used condoms inconsistently with their last partner.
 
-![alt text](tmp/d4f3f985-f0f8-461c-a6f9-361db142def0.png)
+![alt text](e6e2aa64-3022-4d13-9bb7-4f86f5d27218.png)
 
-- Impact of the health program: Graduation emerges as the frontrunner exit reason at an impressive 398,182, overshadowing the next largest categories—lost to follow-up, permanent migration, and voluntary exit—while death and other reasons remain minimal, underscoring a strong program completion rate and highlighting targeted areas for improvement.
+- Impact of the health program: Graduation emerges as the frontrunner exit reason at an impressive 398,182, overshadowing the next largest categories—lost to follow-up.
 
-![alt text](tmp/1749ad86-67e4-4666-ae13-f2f0a4c2665c.png)
+![alt text](34b374fe-f151-440d-ba19-98bac8134562.png)
 
 - Current education level
 
@@ -143,34 +140,18 @@ Train/Test Split: 80% training, 20% testing (stratified to preserve class balanc
 |F1-Score	|Balance precision and recall for imbalanced data.                  |
 
 ## 5. Results
-1. Baseline Models (Imbalanced Data)
-
-|Model	               |Accuracy   |Precision |Recall	|F1-Score	|Observation
-|----------------------|-----------|----------|---------|-----------|--------------------------------|
-|Logistic Regression   |71.25%	   |0.49%	  |64.18%	|0.98%	    |Biased toward the negative class;poor F1.      
-|Random Forest	       |99.75%	   |0.00%	  |0.00%	|0.00%	    |Severe overfitting; predicted all  negatives.
-|XGBoost	           |99.78%	   |0.00%	  |0.00%	|0.00%	    |Same as Random Forest.
-
-2. Undersampled Balanced Data
-
-|Model	                |Accuracy	|Precision |Recall	|F1-Score |Observation|
-|-----------------------|-----------|----------|--------|---------|------------|
-|Logistic Regression	|67.16%	    |66.49%	   |65.15%	|65.82%	  |Balanced performance.|
-|Random Forest	        |65.44%	    |64.77%	   |63.13%	|63.94%	  |Moderate improvement over baseline.|
-|XGBoost	            |61.76%	    |60.19%	   |62.63%	|61.39%	  |Lowest accuracy but better recall    than RF.
-
-3. Hyperparameter Tuning Results
+**Model Performance**
 
 |Model	              |Accuracy	|Precision	|Recall	|F1-Score  |Key Tuning Parameters|
 |---------------------|---------|-----------|-------|----------|----------------------|
-|Logistic Regression  |69.61%	|68.88%	    |68.18%	|68.53%	   |C=10, max_iter=100, solver='liblinear'
-|Random Forest	      |69.85%	|69.23%	    |68.18%	|68.70%	   |max_depth=20, min_samples_leaf=1, n_estimators=200
-|XGBoost	          |48.53%	|48.53%	    |100%	|65.35%	   |scale_pos_weight=50, learning_rate=0.01, max_depth=3, subsample=0.7
+|Logistic Regression  |69.61%	  |68.88%	    |68.18%	|68.53%	   |C=10, max_iter=100, solver='liblinear'
+|Random Forest	      |69.85%	  |69.23%	    |68.18%	|68.70%	   |max_depth=20, min_samples_leaf=1, n_estimators=200
+|XGBoost	            |59.80%   |55.59%	    |85.35% |67.33%	   |scale_pos_weight=50, learning_rate=0.01, max_depth=3, subsample=0.7
 
 # Key Takeaways from Our Analysis
 **Dealing with Class Imbalance**
 
-Our initial models struggled due to extreme class imbalance, defaulting to trivial "Negative" predictions. Basically, they weren’t learning anything useful—just playing it safe.
+Our initial models struggled due to extreme class imbalance, defaulting to trivial "Negative" predictions. 
 
 **What Worked?**
 
@@ -193,6 +174,18 @@ XGBoost - High Recall, But Risky: It caught every single positive case (100% rec
 - Household Food Security: Food insecurity increases risk by 2.1×.
 - Education Level: Lower educational attainment linked with a 1.8× increase in risk.
 - Condom Use: Inconsistent use reflects a 1.5× higher risk scenario.
+
+## Instructions
+Clone this repository:
+
+bash
+
+Copy code
+
+git clone <repository-url>
+
+Run index.ipynb in Jupyter Notebook or any other compatible IDE.
+
 
 # Recommendations
 - Targeted Outreach: Deploy mobile testing units in high-risk counties like Nairobi and Kisumu.
@@ -220,6 +213,6 @@ Models Employed:
 - XGBOOST
 
 ## Resources
-Data - [Download Processed Data](https://github.com/RichieRicky/DSF-PT08P5-GROUP5_CAPSTONE-PROJECT/raw/refs/heads/main/dreams_raw_dataset.zip)
+[Download Processed Data](https://github.com/RichieRicky/DSF-PT08P5-GROUP5_CAPSTONE-PROJECT/raw/refs/heads/main/dreams_raw_dataset.zip)
 
-Notebook - [Open Notebook](https://github.com/RichieRicky/DSF-PT08P5-GROUP5_CAPSTONE-PROJECT/blob/main/Index.ipynb)
+[Open Notebook](https://github.com/RichieRicky/DSF-PT08P5-GROUP5_CAPSTONE-PROJECT/blob/main/Index.ipynb)
