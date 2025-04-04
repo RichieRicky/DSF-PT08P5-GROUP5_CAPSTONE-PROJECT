@@ -42,8 +42,7 @@ This project addresses these challenges by leveraging data science to predict ri
 ### **Objectives:**
 1. Predict HIV Risk: Develop a machine learning model to estimate HIV risk based on demographics, behavior, and program exposure.
 2. Identify Risk Factors: Use feature importance techniques to highlight contributors to HIV vulnerability.
-3. Assess Interventions: Evaluate the impact of biomedical, behavioral, and social protection interventions.
-4. Optimize Resource Allocation: Provide actionable insights to improve program targeting and service delivery.
+3. Optimize Resource Allocation: Provide actionable insights to improve program targeting and service delivery.
 
 # Data Understanding
 ## 1. Dataset Overview
@@ -67,7 +66,7 @@ This project addresses these challenges by leveraging data science to predict ri
   - Categorical columns filled with mode (e.g., county → "Nairobi").
  2. Class Imbalance:
    - Severe imbalance in target variable (result): 99.8% HIV-negative, 0.2% HIV-positive.
-   - Resolution: SMOTE (Synthetic Minority Oversampling) applied during modeling to balance classes.
+   - Instead of using SMOTE (Synthetic Minority Oversampling) for balancing the classes during modeling, we applied undersampling.
  3. Outliers:
    - Extreme values in age_of_household_head (max = 727 million due to data entry errors).
    - Resolution: Replaced outliers with median values.
