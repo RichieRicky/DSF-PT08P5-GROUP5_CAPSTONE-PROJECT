@@ -209,6 +209,6 @@ Models Employed:
 - XGBOOST
 
 ## Resources
-[Download Processed Data](https://github.com/RichieRicky/DSF-PT08P5-GROUP5_CAPSTONE-PROJECT/raw/refs/heads/main/dreams_raw_dataset.zip)
+[Download Processed Data](Data/dreams_raw_dataset.csv)
 
 [Open Notebook](https://github.com/RichieRicky/DSF-PT08P5-GROUP5_CAPSTONE-PROJECT/blob/main/Index.ipynb)
