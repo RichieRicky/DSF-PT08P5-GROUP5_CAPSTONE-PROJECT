@@ -42,8 +42,7 @@ This project addresses these challenges by leveraging data science to predict ri
 ### **Objectives:**
 1. Predict HIV Risk: Develop a machine learning model to estimate HIV risk based on demographics, behavior, and program exposure.
 2. Identify Risk Factors: Use feature importance techniques to highlight contributors to HIV vulnerability.
-3. Assess Interventions: Evaluate the impact of biomedical, behavioral, and social protection interventions.
-4. Optimize Resource Allocation: Provide actionable insights to improve program targeting and service delivery.
+3. Optimize Resource Allocation: Provide actionable insights to improve program targeting and service delivery.
 
 # Data Understanding
 ## 1. Dataset Overview
@@ -67,7 +66,7 @@ This project addresses these challenges by leveraging data science to predict ri
   - Categorical columns filled with mode (e.g., county → "Nairobi").
  2. Class Imbalance:
    - Severe imbalance in target variable (result): 99.8% HIV-negative, 0.2% HIV-positive.
-   - Resolution: SMOTE (Synthetic Minority Oversampling) applied during modeling to balance classes.
+   - Instead of using SMOTE (Synthetic Minority Oversampling) for balancing the classes during modeling, we applied undersampling.
  3. Outliers:
    - Extreme values in age_of_household_head (max = 727 million due to data entry errors).
    - Resolution: Replaced outliers with median values.
@@ -142,7 +141,7 @@ Train/Test Split: 80% training, 20% testing (stratified to preserve class balanc
 |---------------------|---------|-----------|-------|----------|----------------------|
 |Logistic Regression  |69.61%	  |68.88%	    |68.18%	|68.53%	   |C=10, max_iter=100, solver='liblinear'
 |Random Forest	      |69.85%	  |69.23%	    |68.18%	|68.70%	   |max_depth=20, min_samples_leaf=1, n_estimators=200
-|XGBoost	            |59.80%   |55.59%	    |85.35% |67.33%	   |scale_pos_weight=50, learning_rate=0.01, max_depth=3, subsample=0.7
+|XGBoost	            |66.67%   |66.32%	    |63.64% |64.95%	   |scale_pos_weight=50, learning_rate=0.01, max_depth=3, subsample=0.7
 
 # Key Takeaways from Our Analysis
 **Dealing with Class Imbalance**
@@ -157,13 +156,13 @@ Logistic Regression Stood Out: Among the baseline models, it performed the best 
 
 **Tuning Results**
 
-Random Forest - Best Overall: Achieved a solid balance between accuracy (69.85%) and F1-score (68.70%).
+Random Forest - Best Overall: Achieved a solid balance between precision and recall as indicated by  F1-score (68.70%).
 
 The confusion matrix below illustrates the performance of the tuned Random Forest model. It correctly predicted 150 HIV-negative and 135 HIV-positive cases, but misclassified 60 false positives and 63 false negatives. While overall accuracy is strong, the false negative rate suggests room for improvement to reduce missed high-risk cases. 
 
 ![alt text](tmp/a97b4165-520a-46b7-abe2-140bff311b8e.png)
 
-XGBoost - High Recall, But Risky: It caught every single positive case (100% recall) but at the cost of very low precision (48.53%). This means a high false positive rate, which could be a problem depending on the use case.
+
 
 ### Key Features Identified (Random Forest Insights)
 - Age at First Sexual Encounter: Early onset correlates with higher risk.
