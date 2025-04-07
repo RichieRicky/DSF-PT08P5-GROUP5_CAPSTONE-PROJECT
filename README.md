@@ -181,6 +181,8 @@ git clone <repository-url>
 
 Run index.ipynb in Jupyter Notebook or any other compatible IDE.
 
+Testing deployed model: Run 'streamlit run app.py' in bash
+
 
 # Recommendations
 - Targeted Outreach: Deploy mobile testing units in high-risk counties like Nairobi and Kisumu.
@@ -208,6 +210,20 @@ Models Employed:
 - XGBOOST
 
 ## Resources
-[Download Processed Data](https://github.com/RichieRicky/DSF-PT08P5-GROUP5_CAPSTONE-PROJECT/raw/refs/heads/main/dreams_raw_dataset.zip)
+[Download Processed Data](Data/dreams_raw_dataset.csv)
 
 [Open Notebook](https://github.com/RichieRicky/DSF-PT08P5-GROUP5_CAPSTONE-PROJECT/blob/main/Index.ipynb)
+
+## The Team
+
+Richard Mokaya
+
+Christine Ntoiti
+
+Perpetua Manyasi
+
+Charles Otwori
+
+Loise Kabogo
+
+Felix Limo
